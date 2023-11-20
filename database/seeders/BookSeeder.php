@@ -9,18 +9,20 @@ use App\Models\Publisher;
 
 class BookSeeder extends Seeder
 {
+    // Book::factory()->times(50)->create();
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        $publisher = Publisher::where('name', 'Sample publisher 2')->first();
+        // $publisher = Publisher::where('name', 'Sample publisher 2')->first();
 
-        $book = new Book;
-        $book->title = "Sample Book 1";
-        $book->description = "Sample description";
-        $book->isbn = "54845rhfjdoire";
-        $book->publisher_id = $publisher->id;
-        $book->save();
+        // $book = new Book;
+        // $book->title = "Sample Book 1";
+        // $book->description = "Sample description";
+        // $book->isbn = "54845rhfjdoire";
+        // $book->publisher_id = $publisher->id;
+        // $book->save();
     }
+
 }
