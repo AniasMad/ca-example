@@ -14,7 +14,7 @@ class AuthorController extends Controller
     {
         $authors = Author::all();
 
-        return view('books.index',
+        return view('authors.index',
         [
             'authors' => $authors
         ]);
@@ -41,7 +41,11 @@ class AuthorController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $author = Author::findOrFail($id);
+
+        return view('authors.show', [
+            'author' => $author
+        ]);
     }
 
     /**
